@@ -1,0 +1,7 @@
+name: Reusable workflow example
+
+on: workflow_call
+
+jobs:
+  call-workflow:
+    uses: ./.github/actions/init.yaml

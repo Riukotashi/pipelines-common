@@ -1,0 +1,19 @@
+name: Init ci for node with Checkout and pnmp
+
+on: workflow_call
+
+
+jobs:
+  init-node:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: |
+            - recursive: true
+              args: [--no-frozen-lockfile]
+
