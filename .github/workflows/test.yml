@@ -4,4 +4,9 @@ on: workflow_call
 
 jobs:
   call-workflow:
-    uses: ./.github/actions/init.yaml
+    step: 
+    - name: Init node
+      uses: ./.github/actions/init.yml
+    - name: Run tests
+      run: pnpm test
+
