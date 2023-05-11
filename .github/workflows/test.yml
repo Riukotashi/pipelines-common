@@ -6,8 +6,8 @@ on:
 jobs:
   call-workflow:
     step:
-    - name: Init node
-      uses: ./.github/actions/init.yml
+#    - name: Init node
+#      uses: ./.github/actions/init.yml
     - name: Run tests
       run: pnpm test
 
