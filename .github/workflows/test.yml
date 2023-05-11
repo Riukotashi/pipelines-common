@@ -7,7 +7,7 @@ jobs:
   call-workflow:
     steps:
     - name: Init node
-     uses: ./.github/actions/init.yml
+      uses: ./.github/actions/init.yml
     - name: Run tests
       run: pnpm test
 
