@@ -5,6 +5,7 @@ on:
 
 jobs:
   call-workflow:
+    runs-on: ubuntu-latest
     steps:
     - name: Init node
       uses: ./.github/actions/init.yml
