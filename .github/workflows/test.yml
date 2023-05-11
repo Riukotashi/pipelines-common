@@ -9,8 +9,14 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       name: Checkout
-    - name: Init node
-      uses: ./.github/actions/init.yml
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 8
+        run_install: |
+          - recursive: true
+            args: [--no-frozen-lockfile]
+#    - name: Init node
+#      uses: ./.github/actions/init.yml
     - name: Run tests
       run: pnpm test
 
