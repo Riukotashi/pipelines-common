@@ -1,13 +1,12 @@
 name: Init ci for node with Checkout and pnmp
 
-on: workflow_call
+on:
+  workflow_call:
 
 
 jobs:
   init-node:
-
     steps:
-
       - uses: pnpm/action-setup@v2
         with:
           version: 8
